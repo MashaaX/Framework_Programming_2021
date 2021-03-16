@@ -24,14 +24,14 @@ function Login() {
                 </div>
 
                 <div className="row">
-                    <input type="checkbox" name="rememberMe"/>
-                    <p style={{fontWeight:'normal', marginTop:'25px'}}> Remember Me </p>
+                    <button className="cancel-button_red">
+                        Cancel
+                    </button>
                 </div>
 
                 <div className="row">
-                    <button className="cancel-button__red">
-                        Cancel
-                    </button>
+                    <input type="checkbox" name="remember"/>
+                    <p style={{marginTop:'21px'}}> Remember Me</p>
                 </div>
             </div>
         </div>
