@@ -4,15 +4,15 @@ import {
     deleteTodo,
     toggleTodo,
     setVisibilityFilter
-} from "../Action/actionCreator";
-import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from "../Action/actionsTypes";
+} from "../action/actionCreator";
+import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from "../action/actionsTypes";
 import { bindActionCreators } from "redux";
 
 class Table extends Component {
     render() {
         return (
             <div className="col-lg-10 offset-lg-1 col-md-10 col-sm-12 col-xs-12">
-                <nav style={{ marginTop: "60px" }}>
+                <nav style={{ marginTop: "40px" }}>
                     <ol className="breadcrumb">
                         <li
                             className={"breadcrumb-item " + (this.props.visibilityFilter === SHOW_ALL ? 'active' : '')}
@@ -61,7 +61,7 @@ class Table extends Component {
                                             className="fas fa-minus-circle"
                                             onClick={() => this.props.deleteTodo(todo.id)}
                                             style={{
-                                                color: "white",
+                                                color: "blue",
                                                 fontSize: "20pt",
                                                 marginRight: "20px"
                                             }}
@@ -69,7 +69,7 @@ class Table extends Component {
                                         <span
                                             className="fas fa-check-circle"
                                             onClick={() => this.props.toggleTodo(todo.id)}
-                                            style={{ color: "white", fontSize: "20pt" }}
+                                            style={{ color: "green", fontSize: "20pt" }}
                                         />
                                     </td>
                                 </tr>
