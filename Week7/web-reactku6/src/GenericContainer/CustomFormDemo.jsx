@@ -27,7 +27,8 @@ const Form = (props) => {
 }
 
 const CustomFormDemo = (props) => {
-    const FormWithCustom = CustomForm({ contact: {name: '', email: ''}})({propName:'contact', propListName: 'contactList'})(form);
+    const FormWithCustom = CustomForm({ contact: {name: '', email: ''}})
+    ({propName:'contact', propListName: 'contactList'})(form);
     return(
         <div>
             <FormWithCustom {...props} />

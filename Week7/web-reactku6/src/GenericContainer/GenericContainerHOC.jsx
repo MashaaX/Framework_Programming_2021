@@ -27,8 +27,6 @@ nt => {
                         )
                     }
                 ).then(console.log(this.state))
-
-
         }
         render() {
             return (
