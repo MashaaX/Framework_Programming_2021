@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import withContext from "../withContext";
+ 
 
-class Log extends Component {
+class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -79,4 +80,4 @@ class Log extends Component {
   }
 }
 
-export default withContext(Log);
+export default withContext(Login);

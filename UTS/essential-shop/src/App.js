@@ -6,8 +6,9 @@ import jwt_decode from 'jwt-decode';
 
 import AddProduct from './components/AddProduct';
 import Cart from './components/Cart';
-import Login from './components/Log';
+import Login from './components/Login';
 import ProductList from './components/ProductList';
+import About from './components/About';
 
 import Context from "./Context"
 
@@ -80,6 +81,9 @@ export default class App extends Component {
                     { Object.keys(this.state.cart).length }
                   </span>
                 </Link>
+                <Link to="/about" className="navbar-item">
+                  Abouts
+                </Link>
                 {!this.state.user ? (
                   <Link to="/login" className="navbar-item">
                     Login
@@ -97,13 +101,14 @@ export default class App extends Component {
               <Route exact path="/cart" component={Cart} />
               <Route exact path="/add-product" component={AddProduct} />
               <Route exact path="/products" component={ProductList} />
+              <Route exact path="/about" component={About} />
             </Switch>
           </div>
         </Router>
       </Context.Provider>
     );
   }
-
+//1
   componentDidMount() {
     let user = localStorage.getItem("user");
     user = user ? JSON.parse(user) : null;
@@ -139,5 +144,80 @@ export default class App extends Component {
     this.setState({ user: null });
     localStorage.removeItem("user");
   };
+//2
+  async componentDidMount() {
+    let user = localStorage.getItem("user");
+    const products = await axios.get('http://localhost:3001/products');
+    user = user ? JSON.parse(user) : null;
+    this.setState({ user,  products: products.data });
+  }
+
+  addProduct = (product, callback) => {
+    let products = this.state.products.slice();
+    products.push(product);
+    this.setState({ products }, () => callback && callback());
+  };
+//3
+  async componentDidMount() {
+    let user = localStorage.getItem("user");
+    let cart = localStorage.getItem("cart");
+  
+    const products = await axios.get('http://localhost:3001/products');
+    user = user ? JSON.parse(user) : null;
+    cart = cart? JSON.parse(cart) : {};
+  
+    this.setState({ user,  products: products.data, cart });
+  }
+
+  addToCart = cartItem => {
+    let cart = this.state.cart;
+    if (cart[cartItem.id]) {
+      cart[cartItem.id].amount += cartItem.amount;
+    } else {
+      cart[cartItem.id] = cartItem;
+    }
+    if (cart[cartItem.id].amount > cart[cartItem.id].product.stock) {
+      cart[cartItem.id].amount = cart[cartItem.id].product.stock;
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    this.setState({ cart });
+  };
+//4
+  removeFromCart = cartItemId => {
+    let cart = this.state.cart;
+    delete cart[cartItemId];
+    localStorage.setItem("cart", JSON.stringify(cart));
+    this.setState({ cart });
+  };
+  
+  clearCart = () => {
+    let cart = {};
+    localStorage.removeItem("cart");
+    this.setState({ cart });
+  };
+//5
+checkout = () => {
+  if (!this.state.user) {
+    this.routerRef.current.history.push("/login");
+    return;
+  }
+
+  const cart = this.state.cart;
+
+  const products = this.state.products.map(p => {
+    if (cart[p.name]) {
+      p.stock = p.stock - cart[p.name].amount;
+
+      axios.put(
+        `http://localhost:3001/products/${p.id}`,
+        { ...p },
+      )
+    }
+    return p;
+  });
+
+  this.setState({ products });
+  this.clearCart();
+};
 
 }
