@@ -9,7 +9,7 @@ const About = () => {
             <div className="row">
                 <div className="col-sm-6 col-md-6 item">
                 <div className="body">
-                    <img src="assets/img/image_biodata.png" alt="biodata" title="me" />
+                    <img src="../src/assets/rian.jpeg" alt="biodata" title="me" />
                 </div>
                 </div>
                 <div className="col-sm-6 col-md-6 item">
@@ -28,7 +28,6 @@ const About = () => {
             </div>
             </div>
         </div>
-        <hr className="offset-lg" />
         <hr className="offset-lg" />
         </div>
 
