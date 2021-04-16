@@ -18,35 +18,35 @@
   "products": [
     {
       "id": "hdmdu0t80yjkfqselfc",
-      "name": "Tv1",
-      "stock": 10,
-      "price": 399.99,
-      "shortDesc": "Nulla facilisi. Curabitur at lacus ac velit ornare lobortis.",
-      "description": "Cras sagittis. Praesent nec nisl a purus blandit viverra. Ut leo. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Fusce a quam."
+      "name": " LG Oled 65GX ",
+      "stock": 5,
+      "price": "55.499.000",
+      "shortDesc": "LG OLED TV 65GX - OLED TV 65 INCH 4K DOLBY VISION IQ OLED65GX 65GXPTA.",
+      "description": "Smart TV OLED 4K HDR, 65 OLED 4K Panel, α9 Gen3 AI Processor 4K, Dolby Vision IQ, Dolby Atmos, 4K Cinema HDR "
     },
     {
       "id": "3dc7fiyzlfmkfqseqam",
-      "name": "Tv2",
-      "stock": 19,
-      "price": 299.99,
-      "shortDesc": "Nulla facilisi. Curabitur at lacus ac velit ornare lobortis.",
-      "description": "Cras sagittis. Praesent nec nisl a purus blandit viverra. Ut leo. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Fusce a quam."
+      "name": " Samsung UA43TU7000KXXD ",
+      "stock": 10,
+      "price": "5.499.000",
+      "shortDesc": "SAMSUNG UA43TU7000KXXD 43 Inch UHD 4K.",
+      "description": "4K UHD Resolution, Quad Processor, Full HDR Support, YouTube, Netflix, Film Full Support ."
     },
     {
       "id": "aoe8wvdxvrkfqsew67",
-      "name": "Tv3",
-      "stock": 15,
-      "price": 149.99,
-      "shortDesc": "Nulla facilisi. Curabitur at lacus ac velit ornare lobortis.",
-      "description": "Cras sagittis. Praesent nec nisl a purus blandit viverra. Ut leo. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Fusce a quam."
+      "name": " Smart TV Sony 49X7000G ",
+      "stock": 5,
+      "price": "7.758.000",
+      "shortDesc": "Sony 49X7000G 4K SMART.",
+      "description": "Triluminos Display, 4K X-Reality™ PRO, Dolby Atmos, Android TV™,DISPLAY RESOLUTION 3840x2160, HDMI x4 ,USB x2."
     },
     {
       "id": "bmfrurdkswtkfqsf15j",
-      "name": "Tv4",
-      "stock": 5,
-      "price": 109.99,
-      "shortDesc": "Nulla facilisi. Curabitur at lacus ac velit ornare lobortis.",
-      "description": "Cras sagittis. Praesent nec nisl a purus blandit viverra. Ut leo. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Fusce a quam."
+      "name": " Xiaomi Mi TV 4A ",
+      "stock": 8,
+      "price": "2.099.000",
+      "shortDesc": "Xiaomi MI LED TV 4A 32 Inch 4A32.",
+      "description": "Warranty Xiaomi, Resolusi, DTS Audio Speaker, Android OS, Voice Command, Processor QuadCore 64bit, RAM 1GB,ROM 8GB, Slot 3 HDMI, 2 USB, 1 AV, 1 Ethernet,1 Earphone."
     }
   ]
 }

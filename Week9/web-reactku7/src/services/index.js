@@ -1,21 +1,17 @@
-const domainPath = 'http://localhost:3001';
-const GetAPI = (path) =>{
-    const promise = new Promise((resolve, reject) =>{
-        fetch('${domainPath}/${path}')
-        .then(response => response.json())
-        .then((result) => {
-            resolve(result);
-        }, (err) =>{
-            reject(err);
-        })
-    })
-    return promise;
-}
+import GetAPI from "./Get";
+import PostAPI from "./Post";
+import DeleteAPI from "./Delete";
 
-const getNewsBlog = () => GetAPI('posts?_sort=id&_order=desc');;
+const getNewsBlog = () => GetAPI('posts?_sort=id&_order=desc');
+
+const postNewsBlog = (dataYgDiKirim) => PostAPI('posts', dataYgDiKirim);
+
+const deleteNewsBlog = (dataYgDiHapus) => DeleteAPI('posts', dataYgDiHapus);
 
 const API = {
-    getNewsBlog
+    getNewsBlog,
+    postNewsBlog,
+    deleteNewsBlog
 }
 
 export default API;

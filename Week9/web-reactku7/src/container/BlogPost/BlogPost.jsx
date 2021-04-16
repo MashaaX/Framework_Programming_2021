@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import Post from "../../component/BlogPost/Post";
 import './BlogPost.css';
-import '../../services/index';
+import API from "../../services/index";
 
 class BlogPost extends Component{
     state = {
@@ -27,7 +27,7 @@ class BlogPost extends Component{
     }
 
     handleHapusArtikel = (data) =>{
-        fetch("http://localhost:3001/posts/${data}",{method:'DELETE'})
+        fetch(`http://localhost:3001/posts/${data}`,{method:'DELETE'})
             .then(res =>{
                 this.jsonHasilAmbilDariAPI()
             })
@@ -44,15 +44,8 @@ class BlogPost extends Component{
     }
 
     handleTombolSimpan = () => {
-        fetch('http://localhost:3001/posts',{
-            method: 'post',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(this.state.insertArtikel)
-        })
-            .then((response)=>{
+        API.postNewsBlog(this.state.insertArtikel)
+            .then((response) => {
                 this.ambilDataDariServerAPI();
             });
     }
