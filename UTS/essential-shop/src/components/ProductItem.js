@@ -1,4 +1,5 @@
 import React from "react";
+import LGtv from "../assets/LG-Oled-65GX.jpg";
 
 const ProductItem = props => {
   const { product } = props;
@@ -9,7 +10,7 @@ const ProductItem = props => {
           <div className="media-left">
             <figure className="image is-64x64">
               <img
-                src="https://bulma.io/images/placeholders/128x128.png"
+                src={LGtv}
                 alt={product.shortDesc}
               />
             </figure>
@@ -17,7 +18,7 @@ const ProductItem = props => {
           <div className="media-content">
             <b style={{ textTransform: "capitalize" }}>
               {product.name}{" "}
-              <span className="tag is-primary">${product.price}</span>
+              <span className="tag is-primary">Rp. {product.price}</span>
             </b>
             <div>{product.shortDesc}</div>
             {product.stock > 0 ? (
