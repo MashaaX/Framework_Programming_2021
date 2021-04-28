@@ -1,0 +1,20 @@
+{
+    "mahasiswa": [
+      {
+        "NIM": 1841720042,
+        "nama": "Herlangga Satria Mulia Pewana",
+        "alamat": "Jl.K.H.Achmad Dahlan No.5 Lumajang",
+        "hp": "081233012423",
+        "angkatan": 2018,
+        "status": "aktif"
+      },
+      {
+        "NIM": 140823453,
+        "nama": "Mahasiswa X",
+        "alamat": "Jl. Menur No. 9 Surabaya",
+        "hp": "081802023523",
+        "angkatan": 2014,
+        "status": "lulus"
+      }
+    ]
+  }
