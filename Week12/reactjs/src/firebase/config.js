@@ -1,11 +1,12 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyAes5hycFPiggVtpwkwIOsNpuzioJS82F0",
-    authDomain: "week11-2203f.firebaseapp.com",
-    projectId: "week11-2203f",
-    storageBucket: "week11-2203f.appspot.com",
-    messagingSenderId: "579448499888",
-    appId: "1:579448499888:web:f469e2af55a8ce86c9d575",
-    measurementId: "G-Q8Q3L2WC3B"
-  };
+  apiKey: "AIzaSyCGhrEpX-YV2CO3hHdQNTWAlmKhCvqKO_c",
+  authDomain: "week12-b6987.firebaseapp.com",
+  databaseURL: "https://week12-b6987-default-rtdb.firebaseio.com",
+  projectId: "week12-b6987",
+  storageBucket: "week12-b6987.appspot.com",
+  messagingSenderId: "455225999590",
+  appId: "1:455225999590:web:4687b1fe64babc9fa5fb27",
+  measurementId: "G-XRMB9738P0"
+};
 
 export default firebaseConfig;
