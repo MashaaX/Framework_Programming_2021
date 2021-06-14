@@ -1,17 +1,45 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { Component } from "react";
+import './index.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Table, Button } from "reactstrap";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+export default class Student extends Component {
+  render() {
+    return (
+      <div className="App container mt-4">
+        <h4 className="font-weight-bold">Students Registration</h4>
+        <Table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Full Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Student </td>
+              <td>One</td>
+              <td>Student One</td>
+              <td>student@gmal.com</td>
+              <td>9876543210</td>
+              <td>
+                <Button color="success" size="sm" className="mr-3">
+                  Edit
+                </Button>
+                <Button color="danger" size="sm">
+                  Delete
+                </Button>
+              </td>
+            </tr>
+          </tbody>
+        </Table>
+      </div>
+    );
+  }
+}
